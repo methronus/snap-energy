@@ -1,0 +1,21 @@
+---
+layout: default
+title: The Chan Zuckerberg Initiative's Investments
+---
+
+<h2>CZI's Investments</h2>
+
+<!-- Organizations -->
+{% assign userdata = site.data.userdata %}
+{% assign userdata = userdata | sort:"Username" %}
+
+<!-- Document -->
+
+{% for investment in userdata %}
+
+<ul>
+<li><strong>{{ investment.Username }}</strong> ({{ investment.Password }})</li>
+</ul>
+
+{% endfor %}
+
